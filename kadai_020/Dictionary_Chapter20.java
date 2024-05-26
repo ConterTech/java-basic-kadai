@@ -17,20 +17,14 @@ public class Dictionary_Chapter20 {
 	}
 	
 	public void check(String name) {
-		boolean isMatch = false;
 		
-		for(String word : fruitsMap.keySet()) {
-			if(word.equals(name)) {
-				isMatch = true;
-				break;
-			}
-		}
+		String fruits = fruitsMap.get(name);
 			
-		if(isMatch == true){
-			System.out.println(name+"の意味は"+fruitsMap.get(name));
+		if(fruits == null){
+			System.out.println(name+"は辞書に存在しません");
 		}
 		else {
-			System.out.println(name+"は辞書に存在しません");
+			System.out.println(name+"の意味は"+fruits);
 		}
 	}
 }
